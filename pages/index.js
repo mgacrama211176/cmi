@@ -21,7 +21,10 @@ const index = () => {
   return (
     <Container sx={ContainerStyle}>
       <Navbar />
-      <CardContainer>
+      <CardContainer
+        sx={{ display: "flex", flexDirection: "row", flexWrap: "wrap" }}
+      >
+        <Card />
         <Card />
         <Card />
         <Card />
