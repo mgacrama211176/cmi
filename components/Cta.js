@@ -45,9 +45,8 @@ const Cta = () => {
         >
           {options.map((option) => (
             <>
-              <OptionContainer>
+              <OptionContainer key={option}>
                 <Button
-                  key={option._id}
                   sx={{
                     display: "flex",
                     justifyContent: "space-between",

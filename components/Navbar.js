@@ -41,14 +41,17 @@ const Company = styled.div`
   font-size: 62px;
 `;
 
-const Menu = styled.div`
+const Menu = styled.ul`
   display: flex;
   gap: 20px;
   flex-grow: 1px;
+  list-style-type: none;
   cursor: pointer;
 `;
 
-const MenuItem = styled.div``;
+const MenuItem = styled.li`
+  text-decoration: none;
+`;
 
 const Text = styled.p`
   &:hover {
@@ -65,20 +68,16 @@ const Navbar = () => {
         <NavigationContent>
           <Logo />
           <Menu>
-            {navigations.map((pages) => (
-              <MenuItem key={pages}>
-                {pages === "Home" ? (
-                  <>
-                    <Link href="/">
-                      <Text>{pages}</Text>
-                    </Link>
-                  </>
+            {navigations.map((navigation) => (
+              <MenuItem key={navigation}>
+                {navigation === "Home" ? (
+                  <Link href={`/`}>
+                    <Text>{navigation}</Text>
+                  </Link>
                 ) : (
-                  <>
-                    <Link href={`Categories/${pages}`}>
-                      <Text>{pages}</Text>
-                    </Link>
-                  </>
+                  <Link href={`/Categories/${encodeURIComponent(navigation)}`}>
+                    <Text>{navigation}</Text>
+                  </Link>
                 )}
               </MenuItem>
             ))}
@@ -90,3 +89,9 @@ const Navbar = () => {
 };
 
 export default Navbar;
+
+// <>
+//   <Link href={`Categories/${pages}`}>
+//     <Text>{pages}</Text>
+//   </Link>
+// </>

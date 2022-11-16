@@ -2,7 +2,6 @@ import Card from "../components/Card";
 import styled from "styled-components";
 import Cta from "../components/Cta";
 import Container from "@mui/material/Container";
-import Navbar from "../components/navbar";
 
 const CardContainer = styled.div`
   margin-top: 15px;
@@ -19,10 +18,7 @@ const ContainerStyle = {
 const index = () => {
   return (
     <Container sx={ContainerStyle}>
-      <Navbar />
-      <CardContainer
-        sx={{ display: "flex", flexDirection: "row", flexWrap: "wrap" }}
-      >
+      <CardContainer>
         <Card />
         <Card />
         <Card />
