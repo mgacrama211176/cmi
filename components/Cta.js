@@ -6,11 +6,15 @@ import Button from "@mui/material/Button";
 const Cta = () => {
   return (
     <Container sx={{ padding: "10px" }}>
-      <Box>
+      <Box sx={{ backgroundColor: "transparent" }}>
         <ButtonGroup
           variant="contained"
           aria-label="outlined primary button group"
-          sx={{ display: "flex", gap: 1, flexFlow: "column wrap" }}
+          sx={{
+            display: "flex",
+            gap: 1,
+            flexFlow: "column wrap",
+          }}
         >
           <Button sx={{ backgroundColor: "#42E45B" }}>
             Content Marketing Work In Wisconsin

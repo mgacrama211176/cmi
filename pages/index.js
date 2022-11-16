@@ -1,5 +1,3 @@
-import Footer from "../components/Footer";
-import Navbar from "../components/Navbar";
 import Card from "../components/Card";
 import styled from "styled-components";
 import Cta from "../components/Cta";
@@ -20,15 +18,12 @@ const ContainerStyle = {
 const index = () => {
   return (
     <Container sx={ContainerStyle}>
-      <Navbar />
       <CardContainer>
         <Card />
         <Card />
         <Card />
       </CardContainer>
       <Cta />
-
-      <Footer />
     </Container>
   );
 };
